@@ -1,0 +1,298 @@
+
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+/* CABEÇALHO */
+
+.cabecalho {
+    background-color: #14213d;
+    color: white;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.logo h1 {
+    font-size: 28px;
+}
+
+.logo span {
+    color: #fca311;
+}
+
+.pesquisa {
+    display: flex;
+}
+
+.pesquisa input {
+    padding: 10px;
+    width: 220px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.pesquisa button {
+    padding: 10px 15px;
+    background-color: #fca311;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+.pesquisa button:hover {
+    background-color: #e69500;
+}
+
+.menu-superior a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    transition: 0.3s;
+}
+
+.menu-superior a:hover {
+    color: #fca311;
+}
+
+/* ORGANIZAÇÃO PRINCIPAL */
+
+.container {
+    display: flex;
+    gap: 25px;
+    padding: 30px 5%;
+    align-items: flex-start;
+}
+
+/* MENU LATERAL */
+
+.menu-lateral {
+    background-color: white;
+    width: 230px;
+    min-width: 230px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.menu-lateral h2 {
+    margin-bottom: 20px;
+    color: #14213d;
+}
+
+.menu-lateral ul {
+    list-style: none;
+}
+
+.menu-lateral li {
+    margin-bottom: 15px;
+}
+
+.menu-lateral a {
+    text-decoration: none;
+    color: #444;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.menu-lateral a:hover {
+    background-color: #14213d;
+    color: white;
+    padding-left: 18px;
+}
+
+/* CONTEÚDO PRINCIPAL */
+
+.conteudo {
+    flex: 1;
+    min-width: 0;
+}
+
+/* APRESENTAÇÃO */
+
+.apresentacao {
+    background-color: #14213d;
+    color: white;
+    padding: 35px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.apresentacao h2 {
+    margin-bottom: 12px;
+    font-size: 28px;
+}
+
+.apresentacao p {
+    line-height: 1.6;
+}
+
+/* VITRINE DE PRODUTOS */
+
+.vitrine h2 {
+    color: #14213d;
+    margin-bottom: 20px;
+}
+
+.grade-produtos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+/* CARDS DOS PRODUTOS */
+
+.card-produto {
+    background-color: white;
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    text-align: center;
+}
+
+.card-produto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.card-produto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.card-produto h3 {
+    color: #14213d;
+    margin-bottom: 10px;
+}
+
+.descricao {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+    min-height: 35px;
+}
+
+.preco {
+    font-size: 23px;
+    font-weight: bold;
+    color: #16803c;
+    margin-bottom: 5px;
+}
+
+.parcelamento {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 18px;
+}
+
+/* BOTÕES */
+
+.botao {
+    display: inline-block;
+    background-color: #fca311;
+    color: #14213d;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: #14213d;
+    color: white;
+}
+
+/* RODAPÉ */
+
+.rodape {
+    background-color: #14213d;
+    color: white;
+    padding: 35px 5%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.rodape h3 {
+    color: #fca311;
+    margin-bottom: 12px;
+}
+
+.rodape p {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.rodape a {
+    color: white;
+    text-decoration: none;
+}
+
+.rodape a:hover {
+    color: #fca311;
+}
+
+.direitos {
+    grid-column: 1 / -1;
+    text-align: center;
+    border-top: 1px solid #526078;
+    padding-top: 20px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+
+    .cabecalho {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu-superior a {
+        margin: 0 5px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .menu-lateral {
+        width: 100%;
+    }
+
+    .menu-lateral ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .grade-produtos {
+        grid-template-columns: 1fr;
+    }
+
+    .rodape {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+}
